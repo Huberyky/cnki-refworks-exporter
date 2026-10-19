@@ -1,7 +1,7 @@
 # CNKI RefWorks Exporter
 
 使用 Python 和 Playwright，批量读取中国知网官方 **RefWorks 标签格式**题录，自动校验、去重并汇总为 TXT。
-
+**本项目仅用于科研学术，请勿用作商用或其他用途**
 
 ## 工作方式
 
