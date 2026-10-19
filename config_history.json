@@ -1,0 +1,104 @@
+{
+  "start_year": 1978,
+  "end_year": 2026,
+  "keywords": [
+    "民族",
+    "文化"
+  ],
+  "entry_url": "https://kns.cnki.net/kns8s/AdvSearch",
+  "delay_seconds": 3,
+  "timeout_ms": 20000,
+  "journals": [
+    {
+      "name": "民族研究",
+      "aliases": []
+    },
+    {
+      "name": "中央民族大学学报（哲学社会科学版）",
+      "aliases": [
+        "中央民族学院学报"
+      ]
+    },
+    {
+      "name": "西北民族研究",
+      "aliases": []
+    },
+    {
+      "name": "民族学刊",
+      "aliases": []
+    },
+    {
+      "name": "广西民族研究",
+      "aliases": []
+    },
+    {
+      "name": "贵州民族研究",
+      "aliases": []
+    },
+    {
+      "name": "青海民族研究",
+      "aliases": []
+    },
+    {
+      "name": "北方民族大学学报（哲学社会科学版）",
+      "aliases": [
+        "西北第二民族学院学报（哲学社会科学版）"
+      ]
+    },
+    {
+      "name": "西南民族大学学报（人文社会科学版）",
+      "aliases": [
+        "西南民族学院学报（哲学社会科学版）",
+        "西南民族大学学报（人文社科版）"
+      ]
+    },
+    {
+      "name": "云南民族大学学报（哲学社会科学版）",
+      "aliases": [
+        "云南民族学院学报（哲学社会科学版）"
+      ]
+    },
+    {
+      "name": "民族教育研究",
+      "aliases": []
+    },
+    {
+      "name": "中国藏学",
+      "aliases": []
+    },
+    {
+      "name": "世界民族",
+      "aliases": [
+        "民族译丛",
+        "民族论丛"
+      ]
+    },
+    {
+      "name": "广西民族大学学报（哲学社会科学版）",
+      "aliases": [
+        "广西民族学院学报（哲学社会科学版）"
+      ]
+    },
+    {
+      "name": "中华民族共同体研究",
+      "aliases": []
+    }
+  ],
+  "ui": {
+    "result_rows": ".result-table-list > tbody > tr",
+    "title_link": ".name a",
+    "next_page": "#PageNext, a:has-text('下一页')",
+    "auto_search_steps": [],
+    "detail": {
+      "title": ".wx-tit > h1",
+      "authors": "#authorpart > span > a",
+      "institutions": "",
+      "abstract": ".abstract-text",
+      "keywords": ".keywords > a",
+      "publication": ".top-tip",
+      "online_date": ".head-time",
+      "labels": "[class^='rowtit']"
+    }
+  },
+  "scope_note": "可选的期刊沿革口径；已核对的名称详见使用说明，不代表所有历史名称都已完整验证。"
+}

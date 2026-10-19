@@ -1,0 +1,101 @@
+{
+  "start_year": 1978,
+  "end_year": 2026,
+  "keywords": [
+    "民族",
+    "文化"
+  ],
+  "entry_url": "https://kns.cnki.net/kns8s/AdvSearch",
+  "delay_seconds": 3,
+  "timeout_ms": 20000,
+  "journals": [
+    {
+      "name": "民族研究",
+      "aliases": []
+    },
+    {
+      "name": "中央民族大学学报（哲学社会科学版）",
+      "aliases": []
+    },
+    {
+      "name": "西北民族研究",
+      "aliases": []
+    },
+    {
+      "name": "民族学刊",
+      "aliases": []
+    },
+    {
+      "name": "广西民族研究",
+      "aliases": []
+    },
+    {
+      "name": "贵州民族研究",
+      "aliases": []
+    },
+    {
+      "name": "青海民族研究",
+      "aliases": []
+    },
+    {
+      "name": "北方民族大学学报（哲学社会科学版）",
+      "aliases": []
+    },
+    {
+      "name": "西南民族大学学报（人文社会科学版）",
+      "aliases": []
+    },
+    {
+      "name": "云南民族大学学报（哲学社会科学版）",
+      "aliases": []
+    },
+    {
+      "name": "民族教育研究",
+      "aliases": []
+    },
+    {
+      "name": "中国藏学",
+      "aliases": []
+    },
+    {
+      "name": "世界民族",
+      "aliases": []
+    },
+    {
+      "name": "广西民族大学学报（哲学社会科学版）",
+      "aliases": []
+    },
+    {
+      "name": "中华民族共同体研究",
+      "aliases": []
+    }
+  ],
+  "ui": {
+    "result_rows": ".result-table-list > tbody > tr",
+    "title_link": ".name a",
+    "next_page": "#PageNext, a:has-text('下一页')",
+    "auto_search_steps": [],
+    "detail": {
+      "title": ".wx-tit > h1",
+      "authors": "#authorpart > span > a",
+      "institutions": "",
+      "abstract": ".abstract-text",
+      "keywords": ".keywords > a",
+      "publication": ".top-tip",
+      "online_date": ".head-time",
+      "labels": "[class^='rowtit']"
+    }
+  },
+  "export_ui": {
+    "batch_size": 50,
+    "manual_fallback": true,
+    "row_checkbox": "input[type='checkbox']",
+    "select_all": ".result-table-list > thead input[type='checkbox']",
+    "clear_selection": "",
+    "export_menu": "",
+    "export_submenu": "",
+    "refworks_option": "",
+    "content_selector": "",
+    "close_export": ""
+  }
+}
