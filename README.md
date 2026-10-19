@@ -2,7 +2,6 @@
 
 使用 Python 和 Playwright，批量读取中国知网官方 **RefWorks 标签格式**题录，自动校验、去重并汇总为 TXT。
 
-本项目由原 V2 脚本整理而来，主入口改名为 **`cnki_refworks_exporter.py`**。`cnki_refworks_v2.py` 保留为兼容入口，原命令、配置和 `output_v2` 进度可以继续使用。
 
 ## 工作方式
 
