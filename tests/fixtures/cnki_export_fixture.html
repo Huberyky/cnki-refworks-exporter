@@ -1,0 +1,35 @@
+<!doctype html><meta charset="utf-8"><title>虚构知网导出流程测试页</title>
+<p>本页仅含软件测试数据，不连接知网。</p>
+<button id="menu">导出与分析</button>
+<div id="dropdown" style="display:none"><button id="submenu">导出文献</button></div>
+<div id="formats" style="display:none"><button id="refworks">Refworks</button></div>
+<table class="result-table-list"><thead><tr><th><input id="all" type="checkbox"></th><th>题名</th></tr></thead><tbody></tbody></table>
+<button id="PageNext">下一页</button>
+<section id="modal" style="display:none"><button id="close">关闭</button><iframe title="官方导出模拟页"></iframe></section>
+<script>
+let index=0;
+const mode=new URLSearchParams(location.search).get('mode')||'popup';
+const groups=[['测试民族文化甲','测试民族文化乙','测试民族文化丙'],['测试民族文化丙','测试民族文化丁']];
+function render(){
+ document.querySelector('tbody').innerHTML=groups[index].map((t,i)=>`<tr><td><input type="checkbox"></td><td class="name"><a href="/article/${index}/${i}">${t}</a></td></tr>`).join('');
+ document.querySelector('#all').checked=false;
+ document.querySelector('#PageNext').disabled=index===1;
+}
+document.querySelector('#all').onchange=e=>document.querySelectorAll('tbody input').forEach(c=>c.checked=e.target.checked);
+document.querySelector('#menu').onmouseenter=()=>document.querySelector('#dropdown').style.display='block';
+document.querySelector('#menu').onclick=()=>document.querySelector('#dropdown').style.display='block';
+document.querySelector('#submenu').onmouseenter=()=>document.querySelector('#formats').style.display='block';
+document.querySelector('#submenu').onclick=()=>document.querySelector('#formats').style.display='block';
+document.querySelector('#PageNext').onclick=()=>{index++;render()};
+document.querySelector('#close').onclick=()=>{document.querySelector('#modal').style.display='none';document.querySelector('iframe').src='about:blank'};
+document.querySelector('#refworks').onclick=()=>{
+ let titles=[...document.querySelectorAll('tbody tr')].filter(r=>r.querySelector('input').checked).map(r=>r.querySelector('a').innerText);
+ if(mode==='truncated') titles=titles.slice(0,1);
+ const text=titles.map((t,i)=>`RT Journal Article\nSR ${i+1}\nA1 测试作者\nAD 虚构机构;\nT1 ${t}\nJF 民族研究\nYR 2026\nOP 1-12\nK1 民族;文化\nAB 这是虚构软件测试题录，不能用于学术引用。\nSN 0000-0000\nCN 00-0000/C\nLA 中文\nDS CNKI\nLK https://example.invalid/record/${encodeURIComponent(t)}\n`).join('\n');
+ const url='/export?payload='+encodeURIComponent(text);
+ if(mode==='iframe') {document.querySelector('#modal').style.display='block';document.querySelector('iframe').src=url;}
+ else if(mode==='same-tab') location.href=url;
+ else window.open(url,'_blank');
+};
+render();
+</script>
