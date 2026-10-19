@@ -1,4 +1,4 @@
-# CNKI RefWorks Exporter
+# 知网爬虫，文献计量分析
 
 使用 Python 和 Playwright，批量读取中国知网官方 **RefWorks 标签格式**题录，自动校验、去重并汇总为 TXT。
 
